@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #111;
+      color: white;
+    }
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+      text-align: center;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔒 Enter Password to Continue</h2>
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="checkPassword()">Enter</button>
+
+  <script>
+    function checkPassword() {
+      let pass = document.getElementById("password").value;
+      let correct = "manudev123"; // <--- change this to your own password
+
+      if (pass === correct) {
+        window.location.href = "start.html"; // <--- the next page
+      } else {
+        alert("❌ Wrong password!");
+      }
+    }
+  </script>
+</body>
+</html>
